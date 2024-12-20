@@ -14,6 +14,7 @@ import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Resume from "./Pages/Resume";
+
 function App() {
   return (
     <Router>
