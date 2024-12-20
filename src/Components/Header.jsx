@@ -1,5 +1,4 @@
 import React from "react";
-import react from "../assets/images/Temu-logo.png";
 import { MdOutlineClose } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 import { navLinks } from "../Constants";
