@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import badge2 from "../assets/images/webcircular.png";
+import badge2 from "../assets/images/web-development.svg";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
 import absImage from "../assets/images/web-development.svg";
 import separatorImage from "../assets/images/separator.svg";
