@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import badge2 from "../assets/images/badge-2.png";
 import badge2bg from "../assets/images/web-circular.png";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
 import absImage from "../assets/images/web-development.svg";
