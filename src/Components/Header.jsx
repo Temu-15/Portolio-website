@@ -2,7 +2,7 @@ import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 import { navLinks } from "../Constants";
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 

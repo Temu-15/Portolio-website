@@ -1,6 +1,4 @@
 import React from "react";
-import shape7 from "../assets/images/shape-7.png";
-import shape8 from "../assets/images/shape-8.png";
 import separatorImage from "../assets/images/separator.svg";
 
 function Services() {

@@ -7,7 +7,6 @@ import { CiShare1 } from "react-icons/ci";
 import { MdDownload } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { technologyItems, Tools, Heroes } from "../Constants";
-import { FaRegSquare } from "react-icons/fa";
 import YeahRightImage from "../assets/images/yeah-right.webp";
 import Footer from "../Components/Footer";
 import { FaRegSquareCheck } from "react-icons/fa6";
