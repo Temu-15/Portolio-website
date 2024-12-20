@@ -50,17 +50,17 @@ function Contact() {
 
             <ul class="flex mt-[1.6rem] space-x-[1.6rem]">
               <li class="bg-[#000] h-[4rem] w-[4rem] rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="#">
                   <FaFacebook color="hsl(38, 61%, 73%)" size="20px" />
                 </a>
               </li>
               <li class="bg-[#000] h-[4rem] w-[4rem] rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="#">
                   <CiLinkedin color="hsl(38, 61%, 73%)" size="20px" />
                 </a>
               </li>
               <li class="bg-[#000] h-[4rem] w-[4rem] rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="#">
                   <FaInstagram color="hsl(38, 61%, 73%)" size="20px" />
                 </a>
               </li>
@@ -74,14 +74,14 @@ function Contact() {
           method="POST"
         >
           <input
-            required="true"
+            required={true}
             name="name"
             type="text"
             placeholder="Name"
             class="w-full rounded-[6px] py-[1.2rem] px-[1.6rem]  text-white text-[16px] bg-[#27272b66]  outline-none border-0"
           />
           <input
-            required="true"
+            required={true}
             name="email"
             type="email"
             placeholder="Email"
@@ -94,7 +94,7 @@ function Contact() {
             class="w-full rounded-[6px] py-[1.2rem] px-[1.6rem]  text-white text-[1.6rem] bg-[#27272b66]  outline-none border-0"
           />
           <textarea
-            required="true"
+            required={true}
             name="message"
             placeholder="Message"
             rows="6"

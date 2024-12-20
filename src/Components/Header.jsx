@@ -91,8 +91,8 @@ function Header() {
             ))}
           </ul>
 
-          <div class="text-center hidden">
-            <p class="headline-1 navbar-title">Visit Us</p>
+          <div className="text-center hidden">
+            <p className="headline-1 navbar-title">Visit Us</p>
 
             <address>Restaurant St, Delicious City, London 9578, UK</address>
 
