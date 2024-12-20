@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import patternImage from "../assets/images/img-pattern.svg";
 import badge2 from "../assets/images/badge-2.png";
 import badge2bg from "../assets/images/web-circular.png";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
 import absImage from "../assets/images/web-development.svg";
-import shape3 from "../assets/images/shape-3.png";
 import separatorImage from "../assets/images/separator.svg";
 
 function About() {
