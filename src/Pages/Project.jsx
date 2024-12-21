@@ -10,7 +10,7 @@ function Project() {
   const ProjectInfoFilterred = ProjectInfo.filter((proj) => {
     return proj.name === project;
   })[0];
-  console.log(project);
+
   return (
     <main className="max-w-[115.2rem] mx-auto lg:px-[6.4rem] px-[3.2rem] mt-[140px] lg:mt-[205px]">
       <div className="max-w-[76.8rem] mx-auto text-white text-[16px]">

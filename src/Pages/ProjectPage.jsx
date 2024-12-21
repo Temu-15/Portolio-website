@@ -20,6 +20,7 @@ function ProjectPage() {
           <a
             className="flex items-center gap-x-[16px] bg-[#27272b66] border border-transparent hover:border-zinc-700 hover:border-zinc-200 p-[16px] rounded-[8px]"
             href={`/projects/${project.name}`}
+            key={project.name}
           >
             <img
               alt="Currencee"
