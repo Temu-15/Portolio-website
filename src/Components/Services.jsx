@@ -144,24 +144,6 @@ function Services() {
             </div>
           </li>
         </ul>
-
-        {/* <img
-          src={shape7}
-          width="208"
-          height="178"
-          loading="lazy"
-          alt="shape"
-          className="absolute top-[40px] right-[100px] hidden lg:block"
-        />
-
-        <img
-          src={shape8}
-          width="120"
-          height="115"
-          loading="lazy"
-          alt="shape"
-          className="absolute top-[40px] left-[100px] hidden lg:block"
-        /> */}
       </div>
     </section>
   );

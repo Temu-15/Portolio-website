@@ -65,7 +65,7 @@ function AboutPage() {
               What I have been Working on{" "}
             </h3>
             <col />
-            <h2 class="pl-4 mb-[10px] mt-[30px] text-3xl font-extrabold leading-none tracking-tight  md:text-3xl text-white">
+            <h2 className="pl-4 mb-[10px] mt-[30px] text-3xl font-extrabold leading-none tracking-tight  md:text-3xl text-white">
               Hybrid bed-wheelchair design
             </h2>
             <figure className="my-16">
@@ -82,7 +82,7 @@ function AboutPage() {
               process for patients in hospitals.
             </p>
 
-            <h2 class="pl-4 mb-[10px] mt-[30px] text-3xl font-extrabold leading-none tracking-tight  md:text-3xl text-white">
+            <h2 className="pl-4 mb-[10px] mt-[30px] text-3xl font-extrabold leading-none tracking-tight  md:text-3xl text-white">
               Biomedical Management System
             </h2>
             <figure className="my-16">
@@ -100,16 +100,16 @@ function AboutPage() {
               innovative solutions for healthcare. This experience enhanced my
               skills and fueled my passion for impactful software development.
             </p>
-            <h3 class="font-incognito before:content-['#'] before:hidden hover:before:inline before:absolute before:-left-[20px] before:text-[2.4rem] before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative inline-block font-semibold tracking-tight text-[2.4rem] mt-[24px] mb-[8px] text-white">
+            <h3 className="font-incognito before:content-['#'] before:hidden hover:before:inline before:absolute before:-left-[20px] before:text-[2.4rem] before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative inline-block font-semibold tracking-tight text-[2.4rem] mt-[24px] mb-[8px] text-white">
               <a href="#technologies">Technologies</a>
             </h3>
-            <ul class="list-none mt-[8px] ml-[8px] text-zinc-400 ">
+            <ul className="list-none mt-[8px] ml-[8px] text-zinc-400 ">
               {technologyItems.map((item) => (
-                <li class="mb-[16px] text-[16px] flex items-center">
+                <li className="mb-[16px] text-[16px] flex items-center">
                   <a
                     rel="noopener"
                     target="_blank"
-                    class="font-medium inline-flex items-center justify-start gap-x-[4px] text-[#60a5fa] underline"
+                    className="font-medium inline-flex items-center justify-start gap-x-[4px] text-[#60a5fa] underline"
                     href="https://reactjs.org/?ref=victoreke.com"
                   >
                     <img
@@ -119,7 +119,7 @@ function AboutPage() {
                       height="17"
                       decoding="async"
                       data-nimg="1"
-                      class="mr-[8px]"
+                      className="mr-[8px]"
                       src={item.imageUrl}
                       // style="color: transparent;"
                     />
@@ -129,16 +129,16 @@ function AboutPage() {
                 </li>
               ))}
             </ul>
-            <h3 class="font-incognito before:content-['#'] before:hidden hover:before:inline before:absolute before:-left-[20px] before:text-[2.4rem] before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative inline-block font-semibold tracking-tight text-[2.4rem] mt-[24px] mb-[8px] text-white">
+            <h3 className="font-incognito before:content-['#'] before:hidden hover:before:inline before:absolute before:-left-[20px] before:text-[2.4rem] before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative inline-block font-semibold tracking-tight text-[2.4rem] mt-[24px] mb-[8px] text-white">
               <a href="#technologies">Tools</a>
             </h3>
-            <ul class="list-none mt-[8px] ml-[8px] text-zinc-400 ">
+            <ul className="list-none mt-[8px] ml-[8px] text-zinc-400 ">
               {Tools.map((tool) => (
-                <li class="mb-[16px] text-[16px] flex items-center">
+                <li className="mb-[16px] text-[16px] flex items-center">
                   <a
                     rel="noopener"
                     target="_blank"
-                    class="font-medium inline-flex items-center justify-start gap-x-[4px] text-[#60a5fa] underline"
+                    className="font-medium inline-flex items-center justify-start gap-x-[4px] text-[#60a5fa] underline"
                     href="https://reactjs.org/?ref=victoreke.com"
                   >
                     <img
@@ -148,7 +148,7 @@ function AboutPage() {
                       height="17"
                       decoding="async"
                       data-nimg="1"
-                      class="mr-[8px]"
+                      className="mr-[8px]"
                       src={tool.imageUrl}
                       // style="color: transparent;"
                     />
@@ -244,29 +244,31 @@ function AboutPage() {
             </div>
           </div>
         </div>
-        <section class="mt-[80px] max-w-[1024px]">
+        <section className="mt-[80px] max-w-[1024px]">
           <div>
-            <h2 class="text-[3rem] mb-[16px] font-bold tracking-tight text-white">
+            <h2 className="text-[3rem] mb-[16px] font-bold tracking-tight text-white">
               Heroes
             </h2>
-            <p class="text-zinc-400 max-w-2xl text-[16px]">
+            <p className="text-zinc-400 max-w-2xl text-[16px]">
               Inspired by
               <a
                 rel="noopener"
                 target="_blank"
-                class="text-blue-400 underline"
+                className="text-blue-400 underline"
                 href="https://rafa.design?ref=victoreke.com"
               >
                 Rafael Condo's
               </a>
               heroes list, here's my own curated lineup of code conjurers and
               digital dynamos that I'm absolutely stoked to meet someday.
-              <strong class="font-semibold">"In no particular order"</strong>
+              <strong className="font-semibold">
+                "In no particular order"
+              </strong>
             </p>
           </div>
-          <ul class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[24px] mt-[48px] tracking-tight">
+          <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[24px] mt-[48px] tracking-tight">
             {Heroes.map((hero) => (
-              <li class="flex items-center gap-x-[8px] bg-[#27272b66] border border-zinc-800  rounded-[6px] px-[8px] py-[8px] text-white text-[16px]">
+              <li className="flex items-center gap-x-[8px] bg-[#27272b66] border border-zinc-800  rounded-[6px] px-[8px] py-[8px] text-white text-[16px]">
                 <button onClick={handleclick}>
                   <FaRegSquareCheck />
                 </button>
@@ -274,7 +276,7 @@ function AboutPage() {
                 <a
                   rel="noopener"
                   target="_blank"
-                  class="font-incognito tracking-wide hover:underline null"
+                  className="font-incognito tracking-wide hover:underline null"
                   href="https://github.com/bradtraversy?ref=victoreke.com"
                 >
                   {hero}

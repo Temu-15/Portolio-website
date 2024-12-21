@@ -13,20 +13,20 @@ function Project() {
   })[0];
   console.log(project);
   return (
-    <main class="max-w-[115.2rem] mx-auto lg:px-[6.4rem] px-[3.2rem] mt-[140px] lg:mt-[205px]">
-      <div class="max-w-[76.8rem] mx-auto text-white text-[16px]">
-        <div class="flex items-center justify-between flex-wrap mb-[1.6rem]">
-          <h1 class="font-incognito font-black tracking-tight sm:text-[4.8rem] text-[3rem] mb-[1.6rem] max-w-[44.8rem] ">
+    <main className="max-w-[115.2rem] mx-auto lg:px-[6.4rem] px-[3.2rem] mt-[140px] lg:mt-[205px]">
+      <div className="max-w-[76.8rem] mx-auto text-white text-[16px]">
+        <div className="flex items-center justify-between flex-wrap mb-[1.6rem]">
+          <h1 className="font-incognito font-black tracking-tight sm:text-[4.8rem] text-[3rem] mb-[1.6rem] max-w-[44.8rem] ">
             {ProjectInfoFilterred
               ? ProjectInfoFilterred.name
               : "Project not found"}
           </h1>
-          <div class="flex items-center gap-x-[8px]">
+          <div className="flex items-center gap-x-[8px]">
             <a
               href={ProjectInfoFilterred.liveLink}
               rel="noreferrer noopener"
               target="_blank"
-              class="flex items-center gap-x-[8px] bg-[#27272b66]  text-white  border border-transparent rounded-[6px] px-[1.6rem] py-[8px] duration-200 cursor-pointer hover:border-zinc-700 text-[1.6rem]"
+              className="flex items-center gap-x-[8px] bg-[#27272b66]  text-white  border border-transparent rounded-[6px] px-[1.6rem] py-[8px] duration-200 cursor-pointer hover:border-zinc-700 text-[1.6rem]"
             >
               <CiShare1 height="1em" width="1em" />
               Live URL
@@ -35,20 +35,20 @@ function Project() {
               href={ProjectInfoFilterred.GithubLink}
               rel="noreferrer noopener"
               target="_blank"
-              class="flex items-center gap-x-[8px] bg-[#27272b66] text-white  border border-transparent rounded-md px-[1.6rem] py-[8px] duration-200 cursor-pointer hover:border-zinc-700 text-[1.6rem]"
+              className="flex items-center gap-x-[8px] bg-[#27272b66] text-white  border border-transparent rounded-md px-[1.6rem] py-[8px] duration-200 cursor-pointer hover:border-zinc-700 text-[1.6rem]"
             >
               <FaGithub height="1em" width="1em" />
               GitHub
             </a>
           </div>
         </div>
-        <div class="relative w-full h-[16rem] pt-[52.5%]">
+        <div className="relative w-full h-[16rem] pt-[52.5%]">
           <img
             alt="Cover image for Spotify"
             loading="lazy"
             decoding="async"
             data-nimg="fill"
-            class="rounded-[12px] border border-zinc-800 object-contain"
+            className="rounded-[12px] border border-zinc-800 object-contain"
             style={{
               position: "absolute",
               height: "100%",
@@ -60,31 +60,31 @@ function Project() {
             src={ProjectInfoFilterred.previewImage}
           />
         </div>
-        <div class="mt-[3.2rem] text-zinc-400 leading-relaxed">
+        <div className="mt-[3.2rem] text-zinc-400 leading-relaxed">
           <h2
             id="overview"
-            class="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem] my-[3.2rem]"
+            className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem] my-[3.2rem]"
           >
             <a href="#overview">Overview</a>
           </h2>
           {ProjectInfoFilterred.overviewInfo.map((info) => (
-            <p class="mt-[8px] mb-[2.4rem]">{info}</p>
+            <p className="mt-[8px] mb-[2.4rem]">{info}</p>
           ))}
 
           <h2
             id="technologies"
-            class="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-zinc-500 before:text-zinc-400 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
+            className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-zinc-500 before:text-zinc-400 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
           >
             <a href="#technologies">Technologies</a>
           </h2>
 
-          <ul class="list-[square] mt-[2rem] ml-[2rem]">
+          <ul className="list-[square] mt-[2rem] ml-[2rem]">
             {ProjectInfoFilterred.technologies.map((technology) => (
-              <li class="mb-[1.6rem]">
+              <li className="mb-[1.6rem]">
                 <a
                   rel="noopener"
                   target="_blank"
-                  class="text-blue-400 hover:underline"
+                  className="text-blue-400 hover:underline"
                   href={technology.link}
                 >
                   {technology.name}{" "}
@@ -95,34 +95,34 @@ function Project() {
           </ul>
           <h2
             id="technologies"
-            class="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-zinc-500 before:text-zinc-400 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
+            className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[2rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 dark:before:text-zinc-500 before:text-zinc-400 relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
           >
             <a href="#features">Features</a>
           </h2>
-          <p class="mt-[8px] mb-[2.4rem]">
+          <p className="mt-[8px] mb-[2.4rem]">
             {ProjectInfoFilterred.features.smallDescription}
           </p>
 
-          <ul class="list-[square] mt-[2rem] ml-[2rem]">
+          <ul className="list-[square] mt-[2rem] ml-[2rem]">
             {ProjectInfoFilterred.features.featureLists.map(
               (featurparagraph) => (
-                <li class="mb-[1.6rem]">{featurparagraph}</li>
+                <li className="mb-[1.6rem]">{featurparagraph}</li>
               )
             )}
           </ul>
 
           <h2
             id="development-and-challenges"
-            class="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[1rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500  relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
+            className="font-incognito before:content-['#'] before:hidden hover:before:sm:inline-block hover:before:hidden before:absolute lg:before:-left-[2rem] before:-left-[1.6rem] lg:before:text-[2.4rem] before:text-[1rem] block before:top-1/2 before:-translate-y-1/2 before:opacity-80 before:text-zinc-500  relative font-bold tracking-tight text-zinc-100 lg:text-[3.6rem] text-[3rem]  my-[3.2rem]"
           >
             <a href="#development-and-challenges">Development and Challenges</a>
           </h2>
-          <p class="mt-[8px] mb-[2.4rem]">
+          <p className="mt-[8px] mb-[2.4rem]">
             {ProjectInfoFilterred.challenges.smallDescription}
           </p>
-          <ul class="list-[square] mt-[2rem] ml-[2rem]">
+          <ul className="list-[square] mt-[2rem] ml-[2rem]">
             {ProjectInfoFilterred.challenges.challengeLists.map((challenge) => (
-              <li class="mb-[1.6rem]">{challenge}</li>
+              <li className="mb-[1.6rem]">{challenge}</li>
             ))}
           </ul>
         </div>
