@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import badge2 from "../assets/images/web-development.svg";
+import badge2 from "../assets/images/webcircular.png";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
 import absImage from "../assets/images/web-development.svg";
 import separatorImage from "../assets/images/separator.svg";
@@ -130,13 +130,13 @@ function About() {
           </div>
 
           <div className="absolute top-[-65px] right-0 overflow-hidden z-20">
-            {/* <img
+            <img
               src={badge2}
               width="133"
               height="134"
               loading="lazy"
               className="relative animate-rotate360 object-contain"
-            /> */}
+            />
           </div>
         </figure>
       </div>
