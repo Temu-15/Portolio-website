@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectItems } from "../Constants";
 import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
 function ProjectPage() {
   return (
     <main className="max-w-[1280px] mx-auto md:px-[64px] px-[24px] mt-[140px] lg:mt-[205px]">
@@ -17,9 +18,9 @@ function ProjectPage() {
       </header>
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[20px] mb-[48px]">
         {ProjectItems.map((project) => (
-          <a
+          <Link
             className="flex items-center gap-x-[16px] bg-[#27272b66] border border-transparent hover:border-zinc-700 hover:border-zinc-200 p-[16px] rounded-[8px]"
-            href={`/projects/${project.name}`}
+            to={`/projects/${project.name}`}
             key={project.name}
           >
             <img
@@ -40,7 +41,7 @@ function ProjectPage() {
                 {project.description}
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </section>
       <Footer />
