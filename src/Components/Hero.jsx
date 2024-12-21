@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import portfolioImage1 from "../assets/images/portfolio-image-1.jpg";
-import portfolioImage2 from "../assets/images/portfolio-image-1.jpg";
-import portfolioImage3 from "../assets/images/portfolio-image-3.jpg";
+import portfolioImage1 from "../assets/images/Portfolio-image-1.jpg";
+import portfolioImage2 from "../assets/images/Portfolio-image-1.jpg";
+import portfolioImage3 from "../assets/images/Portfolio-image-3.jpg";
 import separatorImage from "../assets/images/separator.svg";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 

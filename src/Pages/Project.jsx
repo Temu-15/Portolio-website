@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { CiShare1 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-
 import { ProjectInfo } from "../Constants";
 import Footer from "../Components/Footer";
 
