@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { FaDownload } from "react-icons/fa";
-import aboutImage from "../assets/images/about-image.jpg";
+import aboutImage from "../assets/images/About-image.jpg";
 import competitionPhoto from "../assets/images/competition-photo.jpg";
 import { CiShare1 } from "react-icons/ci";
 import { MdDownload } from "react-icons/md";
