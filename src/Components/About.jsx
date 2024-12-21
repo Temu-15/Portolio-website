@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import badge2 from "../assets/images/webcircular.png";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
-import absImage from "../assets/images/web-development.svg";
+import absImage from "../assets/images/Web-development";
 import separatorImage from "../assets/images/separator.svg";
 
 function About() {
