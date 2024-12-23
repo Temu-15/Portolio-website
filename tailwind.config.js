@@ -35,7 +35,7 @@ export default {
         "dm-sans": ["DM Sans", "sans-serif"],
       },
       fontSize: {
-        "display-1": "calc(1.3rem + 6.7vw)",
+        "display-1": "calc(1rem + 6vw)",
         "headline-1": "calc(2rem + 2.5vw)",
         "headline-2": "calc(1.3rem + 2.4vw)",
         "title-1": "calc(1.6rem + 1.2vw)",

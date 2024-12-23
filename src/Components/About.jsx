@@ -3,6 +3,7 @@ import badge2 from "../assets/images/webcircular.png";
 import aboutBanner from "../assets/images/web-developer-2.jpg";
 import absImage from "../assets/images/Web-development.svg";
 import separatorImage from "../assets/images/separator.svg";
+import { Link } from "react-router-dom";
 
 function About() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -69,8 +70,8 @@ function About() {
             Tamasgenfiqaadu@gmail.com
           </a>
 
-          <a
-            href="about"
+          <Link
+            to="about"
             className="mx-auto mt-[26px] relative text-gold-crayola text-label-2 font-bold uppercase tracking-5 w-max border-2 border-gold-crayola py-[12px] px-[45px]   overflow-hidden z-10 no-underline group block hover:bg-gold-crayola"
           >
             <span className="absolute bottom-full left-1/2 translate-x-[-50%] w-[200%] h-[200%] z-[-1] bg-gold-crayola duration-2 rounded-[50%]  group-hover:bottom-[-50%] "></span>
@@ -85,7 +86,7 @@ function About() {
             >
               Read More
             </span>
-          </a>
+          </Link>
         </div>
 
         <figure

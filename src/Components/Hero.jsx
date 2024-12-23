@@ -4,6 +4,7 @@ import portfolioImage2 from "../assets/images/Portfolio-image-1.jpg";
 import portfolioImage3 from "../assets/images/Portfolio-image-3.jpg";
 import separatorImage from "../assets/images/separator.svg";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const slides = [
@@ -11,19 +12,21 @@ function Hero() {
       id: 1,
       image: portfolioImage1,
       label: "Full-Stack Developer",
-      title: "Building Seamless Digital Experiences",
+      title: "Let me Build you your dream Website",
       description:
-        "Expertise in creating responsive and scalable web applications.",
+        "3 years of experience in  creating responsive and scalable web apps.",
       cta: "View Projects",
+      link: "projects",
     },
     {
       id: 2,
       image: portfolioImage2,
       label: "Passion for Innovation",
-      title: "Delivering Cutting-Edge Solutions",
+      title: "A skilled developer with an eye for creativity",
       description:
-        "Transforming ideas into functional and impactful applications.",
+        "can develop and transform figma designs into beautiful and friendly websites",
       cta: "Explore Skills",
+      link: "about",
     },
     {
       id: 3,
@@ -31,8 +34,9 @@ function Hero() {
       label: "Let's Collaborate",
       title: "Your Vision, My Code",
       description:
-        "Bringing your concepts to life with clean and efficient code.",
+        "I will Bring your concepts to life with clean and efficient code.",
       cta: "Hire Me",
+      link: "",
     },
   ];
 
@@ -114,12 +118,12 @@ function Hero() {
               <p className="text-body-2 animate-sliderReveal delay-[1500ms] mt-[10px] mb-[40px]">
                 {slide.description}
               </p>
-              <a
-                href="#"
+              <Link
+                to={slide.link}
                 className="relative text-gold-crayola text-label-2 font-bold uppercase tracking-5 border-2 border-gold-crayola py-[12px] px-[45px] animate-sliderReveal delay-[2000ms]"
               >
                 {slide.cta}
-              </a>
+              </Link>
             </div>
           </div>
         ))}

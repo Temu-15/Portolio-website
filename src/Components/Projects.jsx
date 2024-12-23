@@ -3,6 +3,7 @@ import restaurantImage from "../assets/images/project-image-1.jpg";
 import tourismImage from "../assets/images/tourism-image.jpg";
 import cloudingImage from "../assets/images/clouding.jpg";
 import separatorImage from "../assets/images/separator.svg";
+import { Link } from "react-router-dom";
 
 function Projects() {
   return (
@@ -32,7 +33,7 @@ function Projects() {
             data-aos-easing="ease-in-out"
             data-aos-once="false"
           >
-            <a href="projects/Restaurant Website">
+            <Link to="projects/Restaurant Website">
               <div className="relative overflow-hidden z-[1] group">
                 <span className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent to-white-alpha-20 skew-x-[-30deg] translate-x-[-180%] group-hover:skew-x-[-30deg] group-hover:translate-x-[275%] forwards duration-3 z-[10]"></span>
                 <div className="card-banner img-holder w-[350px] h-[450px] aspect-square overflow-hidden bg-eerie-black-4 ">
@@ -56,7 +57,7 @@ function Projects() {
                   </h3>
                 </div>
               </div>
-            </a>
+            </Link>
           </li>
 
           <li
@@ -67,7 +68,7 @@ function Projects() {
             data-aos-easing="ease-in-out"
             data-aos-once="false"
           >
-            <a href="projects/Tourism Agency Website">
+            <Link to="projects/Tourism Agency Website">
               <div className="relative overflow-hidden z-[1] group">
                 <span className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent to-white-alpha-20 skew-x-[-30deg] translate-x-[-180%] group-hover:skew-x-[-30deg] group-hover:translate-x-[275%] duration-3 z-[10]"></span>
                 <div
@@ -94,7 +95,7 @@ function Projects() {
                   </h3>
                 </div>
               </div>
-            </a>
+            </Link>
           </li>
 
           <li
@@ -105,7 +106,7 @@ function Projects() {
             data-aos-easing="ease-in-out"
             data-aos-once="false"
           >
-            <a href="projects/clouder">
+            <Link to="projects/clouder">
               <div className="relative overflow-hidden z-[1] group">
                 <span className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent to-white-alpha-20 skew-x-[-30deg] translate-x-[-180%] forwards group-hover:translate-x-[275%] duration-3 z-[10]"></span>
                 <div
@@ -132,12 +133,12 @@ function Projects() {
                   </h3>
                 </div>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
 
-        <a
-          href="projects"
+        <Link
+          to="projects"
           className="mx-auto mt-[26px] relative text-gold-crayola text-label-2 font-bold uppercase tracking-5 w-max border-2 border-gold-crayola py-[12px] px-[45px] overflow-hidden z-10 no-underline group block hover:bg-gold-crayola"
           data-aos="zoom-in"
           data-aos-delay="200"
@@ -157,7 +158,7 @@ function Projects() {
           >
             See More Projects
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );
