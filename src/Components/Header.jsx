@@ -24,7 +24,7 @@ function Header() {
     };
 
     const handleScroll = () => {
-      if (window.scrollY > positiony && window.scrollY > 51) {
+      if (window.scrollY > positiony && window.scrollY > 51 && !menuOpen) {
         headerRef.current.classList.add(
           "translate-y-[-110%]",
           "duration-500",
@@ -47,7 +47,7 @@ function Header() {
 
   return (
     <header
-      className="fixed top-0 sm:top-[51px] left-0 w-full bg-transparent py-[40px] z-50 border-e border-transparent transition-duration-1"
+      className="fixed top-0 sm:top-[51px] left-0 w-full bg-transparent py-[40px] z-50 border-e border-transparent transition-duration-1 overflow-hidden"
       ref={headerRef}
     >
       <div className="px-5 flex justify-between items-center gap-2 relative">
@@ -91,7 +91,7 @@ function Header() {
             ))}
           </ul>
 
-          <div className="text-center hidden">
+          {/* <div className="text-center hidden">
             <p className="headline-1 navbar-title">Visit Us</p>
 
             <address>Restaurant St, Delicious City, London 9578, UK</address>
@@ -105,7 +105,7 @@ function Header() {
             <p>Booking Request</p>
 
             <a href="tel:+88123123456">+88-123-123456</a>
-          </div>
+          </div> */}
         </nav>
         <HashLink
           to="/#contact"
@@ -156,7 +156,6 @@ function Header() {
               setActive("");
             }}
           >
-            {/* <img src={react} alt="Logo" /> */}
             <FaHome color="hsl(38, 61%, 73%)" size="2rem" />
             <span
               className="relative text-gold-crayola font-bold tracking-2 mb-[12px] text-[15px] uppercase text-center text-white"
