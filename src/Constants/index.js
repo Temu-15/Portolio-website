@@ -119,6 +119,7 @@ const ProjectInfo = [
         "Secured user sessions with advanced authentication mechanisms.",
       ],
     },
+    nextItemLink: "Restaurant Website",
   },
   {
     name: "Restaurant Website",
@@ -155,6 +156,7 @@ const ProjectInfo = [
         "Optimized the website for SEO.",
       ],
     },
+    nextItemLink: "Tourism Agency Website",
   },
   {
     name: "Tourism Agency Website",
@@ -193,6 +195,7 @@ const ProjectInfo = [
         "Improved search engine optimization.",
       ],
     },
+    nextItemLink: "Fashionista",
   },
   {
     name: "Fashionista",
@@ -230,6 +233,7 @@ const ProjectInfo = [
         "Enhanced product display with dynamic sorting.",
       ],
     },
+    nextItemLink: "Calculator App",
   },
   {
     name: "Calculator App",
@@ -262,6 +266,7 @@ const ProjectInfo = [
         "Optimized for quick calculations with minimal lag.",
       ],
     },
+    nextItemLink: "Designer Landing Page",
   },
   {
     name: "Designer Landing Page",
@@ -294,6 +299,7 @@ const ProjectInfo = [
         "Enhanced UI with scroll-based animations.",
       ],
     },
+    nextItemLink: "Spotify Clone",
   },
   {
     name: "Spotify Clone",
@@ -332,6 +338,7 @@ const ProjectInfo = [
         "Resolved cross-origin resource sharing (CORS) issues.",
       ],
     },
+    nextItemLink: "clouder",
   },
 ];
 

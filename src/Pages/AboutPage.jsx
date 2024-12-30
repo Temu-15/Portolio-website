@@ -105,11 +105,11 @@ function AboutPage() {
             </h3>
             <ul className="list-none mt-[8px] ml-[8px] text-zinc-400 ">
               {technologyItems.map((item) => (
-                <li className="mb-[16px] text-[16px] flex items-center">
+                <li className="mb-[16px] text-[16px] flex items-start sm:items-center">
                   <a
                     rel="noopener"
                     target="_blank"
-                    className="font-medium inline-flex items-center justify-start gap-x-[4px] text-[#60a5fa] underline"
+                    className="font-medium inline-flex items-start sm:items-center justify-start gap-x-[4px] text-[#60a5fa] underline mr-[1.5rem] sm:mr-[.5rem]"
                     href="https://reactjs.org/?ref=victoreke.com"
                   >
                     <img

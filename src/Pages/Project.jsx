@@ -4,9 +4,11 @@ import { CiShare1 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { ProjectInfo } from "../Constants";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function Project() {
   const { project } = useParams();
+  const navigate = useNavigate();
   const ProjectInfoFilterred = ProjectInfo.filter((proj) => {
     return proj.name === project;
   })[0];
@@ -124,6 +126,54 @@ function Project() {
               <li className="mb-[1.6rem]">{challenge}</li>
             ))}
           </ul>
+        </div>
+        <div class="flex justify-between mt-[3.2rem]">
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+            type="button"
+            class="bg-[#27272b66]  text-white rounded-l-md  py-2 hover:bg-gold-crayola hover:text-black px-12"
+          >
+            <div class="flex flex-row align-middle">
+              <svg
+                class="w-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <p class="ml-2">Prev</p>
+            </div>
+          </button>
+          <button
+            type="button"
+            class="bg-[#27272b66]  text-white rounded-r-md py-[8px] hover:bg-gold-crayola hover:text-black px-12"
+            onClick={() => {
+              navigate(`/projects/${ProjectInfoFilterred.nextItemLink}`);
+            }}
+          >
+            <div class="flex flex-row align-middle">
+              <span class="mr-2">Next</span>
+              <svg
+                class="w-5 ml-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
       <Footer />
