@@ -22,7 +22,6 @@ import ScrollToTop from "./ScrollToTop";
 import Preloader from "./Components/Preloader";
 
 function App() {
-  
   const [isLoading, setIsLoading] = useState(true);
   const [preloaderText, setPreloaderText] = useState("Welcome");
 
@@ -36,8 +35,10 @@ function App() {
 
   return (
     <div>
-      {isLoading && <Preloader text={preloaderText} isVisible={isLoading} />}
-      {!isLoading && (
+      {/* {isLoading && <Preloader text={preloaderText} isVisible={isLoading} />} */}
+      {isLoading ? (
+        <Preloader text={preloaderText} isVisible={isLoading} />
+      ) : (
         <>
           <TopBar />
           <Header />g
