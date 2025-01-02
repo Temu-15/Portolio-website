@@ -26,22 +26,18 @@ function App() {
   const [preloaderText, setPreloaderText] = useState("Welcome");
 
   useEffect(() => {
-    const handlePreloader = () => {
-      const timer = setTimeout(() => setIsLoading(false), 2000);
-      return () => clearTimeout(timer);
-    };
-    window.onload = handlePreloader();
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div>
-      {/* {isLoading && <Preloader text={preloaderText} isVisible={isLoading} />} */}
       {isLoading ? (
         <Preloader text={preloaderText} isVisible={isLoading} />
       ) : (
         <>
           <TopBar />
-          <Header />g
+          <Header />
           <Routes>
             <Route
               path="/"
