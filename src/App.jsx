@@ -26,15 +26,8 @@ function App() {
   const [preloaderText, setPreloaderText] = useState("Welcome");
 
   useEffect(() => {
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
   }, []);
   return (
     <div>
