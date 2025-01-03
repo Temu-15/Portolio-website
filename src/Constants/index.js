@@ -4,6 +4,7 @@ import fashionImage from "../assets/images/fashion-image.png";
 import CalculatorImage from "../assets/images/calculatorImage.png";
 import designerLandingImage from "../assets/images/landingPage.png";
 import spotifyCloneImage from "../assets/images/Spotify1.png";
+import tourismWebsite from "../assets/images/tourism-website.png";
 import { CiShare1 } from "react-icons/ci";
 const navLinks = [
   {
@@ -160,9 +161,9 @@ const ProjectInfo = [
   },
   {
     name: "Tourism Agency Website",
-    liveLink: "https://temu-15.github.io/tourism-agency-website/",
-    GithubLink: "https://github.com/temu-15/tourism-agency-website",
-    previewImage: ClouderImage,
+    liveLink: "https://tourism-website-x.vercel.app/",
+    GithubLink: "https://github.com/Temu-15/Tourism-Website",
+    previewImage: tourismWebsite,
     overviewInfo: [
       "A vibrant tourism agency website promoting travel packages and destinations.",
       "Features include a dynamic menu, map integration, and responsive design.",
@@ -199,8 +200,8 @@ const ProjectInfo = [
   },
   {
     name: "Fashionista",
-    liveLink: "https://temu-15.github.io/fashionista/",
-    GithubLink: "https://github.com/temu-15/fashionista",
+    liveLink: "https://temu-15.github.io/Fashion-Website/",
+    GithubLink: "https://github.com/Temu-15/Fashion-Website",
     previewImage: fashionImage,
     overviewInfo: [
       "An eCommerce platform showcasing fashion collections with promotional offers.",
@@ -237,7 +238,7 @@ const ProjectInfo = [
   },
   {
     name: "Calculator App",
-    liveLink: "https://temu-15.github.io/calculator-app/",
+    liveLink: "https://temu-15.github.io/Calculator-App/",
     GithubLink: "https://github.com/temu-15/calculator-app",
     previewImage: CalculatorImage,
     overviewInfo: [
@@ -270,9 +271,10 @@ const ProjectInfo = [
   },
   {
     name: "Designer Landing Page",
-    liveLink: "https://temu-15.github.io/designer-landing-page/",
-    GithubLink: "https://github.com/temu-15/designer-landing-page",
-    previewImage: designerLandingImage, // Replace with the actual image import if available
+    liveLink:
+      "https://phenomenal-crostata-79064a.netlify.app/components/contacts",
+    GithubLink: "https://github.com/Temu-15/Alok-Kaushik",
+    previewImage: designerLandingImage,
     overviewInfo: [
       "A stunning, modern landing page created for showcasing design services.",
       "The project emphasizes clean aesthetics and intuitive navigation.",
@@ -303,8 +305,8 @@ const ProjectInfo = [
   },
   {
     name: "Spotify Clone",
-    liveLink: "https://temu-15.github.io/spotify-clone/",
-    GithubLink: "https://github.com/temu-15/spotify-clone",
+    liveLink: "https://spotify-web-temu15.netlify.app/",
+    GithubLink: "https://github.com/Temu-15/Spotify-Clone-Website-",
     previewImage: spotifyCloneImage, // Replace with the actual image import if available
     overviewInfo: [
       "A Spotify-inspired music streaming app that mimics the core functionalities of the platform.",
