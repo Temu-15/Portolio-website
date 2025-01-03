@@ -5,7 +5,9 @@ export default function ScrollToTop() {
   const pathName = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (pathName.hash !== "#contact") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }, [pathName]);
 
   return null;

@@ -78,6 +78,7 @@ function Contact() {
             name="name"
             type="text"
             placeholder="Name"
+            autoComplete="off"
             className="w-full rounded-[6px] py-[1.2rem] px-[1.6rem]  text-white text-[16px] bg-[#27272b66]  outline-none border-0"
           />
           <input
@@ -85,12 +86,14 @@ function Contact() {
             name="email"
             type="email"
             placeholder="Email"
+            autoComplete="off"
             className="w-full rounded-[6px] py-[1.2rem] px-[1.6rem]  text-white text-[1.6rem] bg-[#27272b66]  outline-none border-0"
           />
           <input
             name="subject"
             type="text"
             placeholder="Subject"
+            autoComplete="off"
             className="w-full rounded-[6px] py-[1.2rem] px-[1.6rem]  text-white text-[1.6rem] bg-[#27272b66]  outline-none border-0"
           />
           <textarea
