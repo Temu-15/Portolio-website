@@ -44,22 +44,42 @@ function Project() {
           </div>
         </div>
         <div className="relative w-full h-[16rem] pt-[52.5%]">
-          <img
-            alt="Cover image for Spotify"
-            loading="lazy"
-            decoding="async"
-            data-nimg="fill"
-            className="rounded-[12px] border border-zinc-800 object-contain"
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%",
-              inset: "0px",
-              color: "transparent",
-            }}
-            sizes="100vw"
-            src={ProjectInfoFilterred.previewImage}
-          />
+          {ProjectInfoFilterred.previewImage ? (
+            <img
+              alt="Cover image for Spotify"
+              loading="lazy"
+              decoding="async"
+              data-nimg="fill"
+              className="rounded-[12px] border border-zinc-800 object-contain"
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                inset: "0px",
+                color: "transparent",
+              }}
+              sizes="100vw"
+              src={ProjectInfoFilterred.previewImage}
+            />
+          ) : (
+            <iframe
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              src={ProjectInfoFilterred.previewVideoLink}
+              className="rounded-[12px] border border-zinc-800 object-contain"
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                inset: "0px",
+                color: "transparent",
+                border: 0,
+              }}
+              controls
+            ></iframe>
+          )}
         </div>
         <div className="mt-[3.2rem] text-zinc-400 leading-relaxed">
           <h2

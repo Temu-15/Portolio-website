@@ -5,6 +5,7 @@ import CalculatorImage from "../assets/images/calculatorImage.png";
 import designerLandingImage from "../assets/images/landingPage.png";
 import spotifyCloneImage from "../assets/images/Spotify1.png";
 import tourismWebsite from "../assets/images/tourism-website.png";
+
 import { CiShare1 } from "react-icons/ci";
 const navLinks = [
   {
@@ -307,7 +308,8 @@ const ProjectInfo = [
     name: "Spotify Clone",
     liveLink: "https://spotify-web-temu15.netlify.app/",
     GithubLink: "https://github.com/Temu-15/Spotify-Clone-Website-",
-    previewImage: spotifyCloneImage, // Replace with the actual image import if available
+    previewVideoLink:
+      "https://www.youtube.com/embed/rQGaJsgnuYI?si=3Zimw5FkKGy2hSjG",
     overviewInfo: [
       "A Spotify-inspired music streaming app that mimics the core functionalities of the platform.",
       "The app integrates the Spotify API to authenticate users and fetch their playlists.",
