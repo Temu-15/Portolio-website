@@ -23,8 +23,6 @@ jobs:
 
       - name: Authenticate with Firebase
         run: firebase login:ci
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --only hosting
