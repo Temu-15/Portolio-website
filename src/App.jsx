@@ -1,34 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
-
-import About from "./Components/About";
-import Header from "./Components/Header";
-import TopBar from "./Components/TopBar";
-import Hero from "./Components/Hero";
-import AboutPage from "./Pages/AboutPage";
-import Services from "./Components/Services";
-import ProjectPage from "./Pages/ProjectPage";
-import Projects from "./Components/Projects";
-import Project from "./Pages/Project";
-import Footer from "./Components/Footer";
-import Contact from "./Components/Contact";
-import Resume from "./Pages/Resume";
 import ScrollToTop from "./ScrollToTop";
 import Preloader from "./Components/Preloader";
+import TopBar from "./Components/TopBar";
+import Header from "./Components/Header";
 
+// Lazy load components
+const Hero = lazy(() => import("./Components/Hero"));
+const About = lazy(() => import("./Components/About"));
+const Services = lazy(() => import("./Components/Services"));
+const Projects = lazy(() => import("./Components/Projects"));
+const Contact = lazy(() => import("./Components/Contact"));
+const Footer = lazy(() => import("./Components/Footer"));
+const AboutPage = lazy(() => import("./Pages/AboutPage"));
+const Resume = lazy(() => import("./Pages/Resume"));
+const ProjectPage = lazy(() => import("./Pages/ProjectPage"));
+const Project = lazy(() => import("./Pages/Project"));
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [preloaderText, setPreloaderText] = useState("Welcome");
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const pathname = location.pathname;
+    if (pathname.startsWith("/projects/")) {
+      const projectName = pathname.split("/projects/")[1];
+
+      document.title = `Projects - ${projectName}`;
+    }
+    if (pathname === "/") {
+      document.title = "Temesgen";
+    } else {
+      document.title = pathname.replace("/", "").replace("*", "");
+    }
+  }, [location.pathname]);
   return (
     <div>
       {isLoading ? (
@@ -37,25 +52,30 @@ function App() {
         <>
           <TopBar />
           <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <About />
-                  <Services />
-                  <Projects />
-                  <Contact />
-                  <Footer />
-                </>
-              }
-            />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="showresume" element={<Resume />} />
-            <Route path="projects" element={<ProjectPage />} />
-            <Route path="projects/:project" element={<Project />} />
-          </Routes>
+          <ScrollToTop />
+          <Suspense
+            fallback={<Preloader text={preloaderText} isVisible={true} />}
+          >
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <About />
+                    <Services />
+                    <Projects />
+                    <Contact />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="showresume" element={<Resume />} />
+              <Route path="projects" element={<ProjectPage />} />
+              <Route path="projects/:project" element={<Project />} />
+            </Routes>
+          </Suspense>
         </>
       )}
     </div>

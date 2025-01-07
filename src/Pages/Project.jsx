@@ -43,7 +43,7 @@ function Project() {
             </a>
           </div>
         </div>
-        <div className="relative w-full h-[16rem] pt-[52.5%]">
+        <div className="relative w-full h-[26rem] md:h-[16rem] pt-[52.5%]">
           {ProjectInfoFilterred.previewImage ? (
             <img
               alt="Cover image for Spotify"
@@ -63,7 +63,6 @@ function Project() {
             />
           ) : (
             <iframe
-              title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
@@ -75,7 +74,6 @@ function Project() {
                 width: "100%",
                 inset: "0px",
                 color: "transparent",
-                border: 0,
               }}
               controls
             ></iframe>

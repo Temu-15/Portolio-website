@@ -54,6 +54,9 @@ function Header() {
         <Link
           to="/"
           className="no-underline me-auto mr-[60px] flex items-center gap-4 md:pl-[2rem]"
+          onClick={() => {
+            setActive("");
+          }}
         >
           <FaHome color="hsl(38, 61%, 73%)" size="2rem" />
           <span
@@ -90,22 +93,6 @@ function Header() {
               </li>
             ))}
           </ul>
-
-          {/* <div className="text-center hidden">
-            <p className="headline-1 navbar-title">Visit Us</p>
-
-            <address>Restaurant St, Delicious City, London 9578, UK</address>
-
-            <p>Open: 9.30 am - 2.30pm</p>
-
-            <a href="mailto:booking@grilli.com">booking@grilli.com</a>
-
-            <div></div>
-
-            <p>Booking Request</p>
-
-            <a href="tel:+88123123456">+88-123-123456</a>
-          </div> */}
         </nav>
         <HashLink
           to="/#contact"
