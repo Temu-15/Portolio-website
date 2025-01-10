@@ -45,22 +45,28 @@ function Project() {
         </div>
         <div className="relative w-full h-[26rem] md:h-[16rem] pt-[52.5%]">
           {ProjectInfoFilterred.previewImage ? (
-            <img
-              alt="Cover image for Spotify"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="rounded-[12px] border border-zinc-800 object-contain"
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                inset: "0px",
-                color: "transparent",
-              }}
-              sizes="100vw"
-              src={ProjectInfoFilterred.previewImage}
-            />
+            <a
+              href={ProjectInfoFilterred.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                alt="Cover image for Spotify"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                className="rounded-[12px] border border-zinc-800 object-contain cursor-pointer transition-transform duration-300 hover:scale-110"
+                style={{
+                  position: "absolute",
+                  height: "100%",
+                  width: "100%",
+                  inset: "0px",
+                  color: "transparent",
+                }}
+                sizes="100vw"
+                src={ProjectInfoFilterred.previewImage}
+              />
+            </a>
           ) : (
             <iframe
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
