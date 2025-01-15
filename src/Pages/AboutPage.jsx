@@ -8,6 +8,7 @@ import { MdDownload } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { technologyItems, Tools, Heroes } from "../Constants";
 import YeahRightImage from "../assets/images/yeah-right.webp";
+import certificateImage from "../assets/images/certificate.jpg";
 import Footer from "../Components/Footer";
 import { FaRegSquareCheck } from "react-icons/fa6";
 function AboutPage() {
@@ -86,9 +87,10 @@ function AboutPage() {
               Biomedical Management System
             </h2>
             <figure className="my-16">
-              <img src={competitionPhoto} alt="" />
+              <img src={certificateImage} alt="" />
               <figcaption className="mt-[1.6rem] text-center text-[14px]  text-gray-400">
-                A shot of my teammate and I with host organizers (May 02 2023)
+                A shot of the certificate I received for recognition(december 02
+                2024)
               </figcaption>
             </figure>
             <p className="mt-2 mb-6 text-[#a1a1aa] text-[16px] leading-relaxed">
@@ -211,7 +213,7 @@ function AboutPage() {
                   rel="noopener"
                   target="_blank"
                   className="flex items-center justify-center text-white text-center gap-x-[8px] basis-[90%] bg-[#27272b66]   rounded-[6px] py-[8px] text-[18px] font-semibold"
-                  href="/showresume"
+                  href="https://temesgen-fikadu.tiiny.site"
                 >
                   View Résumé{" "}
                   <CiShare1

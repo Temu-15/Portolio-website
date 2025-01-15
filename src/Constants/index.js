@@ -389,7 +389,7 @@ const ProjectItems = [
     description:
       "A clone of the popular music player Spotify with ReactJs , Context Api and Spotify Web Api.",
     imageUrl:
-      "https://media.wired.com/photos/5927001eaf95806129f51539/master/w_2560%2Cc_limit/spotify-logo-zoom-s.jpg",
+      "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png",
   },
 ];
 

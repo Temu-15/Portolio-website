@@ -34,14 +34,16 @@ function App() {
   useEffect(() => {
     const pathname = location.pathname;
     if (pathname.startsWith("/projects/")) {
-      const projectName = pathname.split("/projects/")[1];
-
+      console.log(pathname);
+      const projectName = decodeURIComponent(pathname.split("/")[2]);
       document.title = `Projects - ${projectName}`;
-    }
-    if (pathname === "/") {
+    } else if (pathname === "/") {
       document.title = "Temesgen";
     } else {
-      document.title = pathname.replace("/", "").replace("*", "");
+      document.title = pathname
+        .replace("/", "")
+        .replace("*", "")
+        .replace(/^\w/, (c) => c.toUpperCase());
     }
   }, [location.pathname]);
   return (
