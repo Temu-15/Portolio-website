@@ -49,16 +49,16 @@ function Contact() {
     withReactContent(Swal).fire({
       title: response.success ? "Success!" : "Oops!",
       text: response.message,
-      icon: response.success ? "success" : "error", // Display success or error icon
+      icon: response.success ? "success" : "error",
       confirmButtonText: "Okay",
       buttonsStyling: true,
       customClass: {
-        popup: "custom-swal-popup", // Add a custom class for styling
+        popup: "custom-swal-popup",
         title: "custom-swal-title",
         htmlContainer: "custom-swal-text",
         confirmButton: "custom-swal-button",
       },
-      backdrop: `rgba(0, 0, 0, 0.8)`, // Dark backdrop
+      backdrop: `rgba(0, 0, 0, 0.8)`,
     });
   };
 
