@@ -1,10 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import separatorImage from "../assets/images/separator.svg";
 function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formSubmitHandler = async (e) => {
+    setIsSubmitting(true);
+    e.preventDefault();
+    const formuser = e.target.name.value;
+    const email = e.target.email.value;
+    const subject = e.target.subject.value;
+    const message = e.target.message.value;
+    const formData = { formuser, email, subject, message };
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/tamasgenfiqaadu@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        const result = await response.json();
+        showSwal(result);
+        e.target.reset();
+      } else {
+        console.error("Error submitting form:", response.statusText);
+
+        console.error("Fetch error:", error);
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      showSwal({ message: "Error submitting form. Please try again later." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  const showSwal = (response) => {
+    withReactContent(Swal).fire({
+      title: response.success ? "Success!" : "Oops!",
+      text: response.message,
+      icon: response.success ? "success" : "error", // Display success or error icon
+      confirmButtonText: "Okay",
+      buttonsStyling: true,
+      customClass: {
+        popup: "custom-swal-popup", // Add a custom class for styling
+        title: "custom-swal-title",
+        htmlContainer: "custom-swal-text",
+        confirmButton: "custom-swal-button",
+      },
+      backdrop: `rgba(0, 0, 0, 0.8)`, // Dark backdrop
+    });
+  };
+
   return (
     <div className="w-full flex flex-col" id="contact">
       <p
@@ -68,11 +125,7 @@ function Contact() {
           </div>
         </div>
 
-        <form
-          className="ml-auto space-y-[1.6rem]"
-          action="https://formsubmit.co/06e09d805a272efb4b5537c39b43df1f"
-          method="POST"
-        >
+        <form className="ml-auto space-y-[1.6rem]" onSubmit={formSubmitHandler}>
           <input
             required={true}
             name="name"
@@ -107,19 +160,27 @@ function Contact() {
           <button
             className="mx-auto mt-[26px] relative text-gold-crayola text-label-2 font-bold uppercase tracking-5 w-max border-2 border-gold-crayola py-[12px] px-[45px]  overflow-hidden z-10 no-underline group block hover:bg-gold-crayola"
             type="submit"
+            disabled={isSubmitting}
           >
-            <span className="absolute bottom-full left-1/2 translate-x-[-50%] w-[200%] h-[200%] z-[-1] bg-gold-crayola duration-2 rounded-[50%]  group-hover:bottom-[-50%] "></span>
-
-            <span className="duration-1 block transform group-hover:translate-y-[-40px] ">
-              Submit
-            </span>
-
-            <span
-              className="absolute top-full left-1/2  translate-x-[-50%] group-hover:translate-x-[-50%]  group-hover:translate-y-[-50%] group-hover:top-1/2 w-max text-smoky-black-1 duration-1"
-              aria-hidden="true"
-            >
-              Submit
-            </span>
+            {isSubmitting ? (
+              <div
+                className="h-8 w-8 border-[3px] mx-10 border-t-2 border-t-transparent border-gold-crayola rounded-full animate-spin"
+                aria-label="Loading spinner"
+              ></div>
+            ) : (
+              <div>
+                <span className="absolute bottom-full left-1/2 translate-x-[-50%] w-[200%] h-[200%] z-[-1] bg-gold-crayola duration-2 rounded-[50%]  group-hover:bottom-[-50%] "></span>
+                <span className="duration-1 block transform group-hover:translate-y-[-40px] ">
+                  Submit
+                </span>
+                <span
+                  className="absolute top-full left-1/2  translate-x-[-50%] group-hover:translate-x-[-50%]  group-hover:translate-y-[-50%] group-hover:top-1/2 w-max text-smoky-black-1 duration-1"
+                  aria-hidden="true"
+                >
+                  Submit
+                </span>
+              </div>
+            )}
           </button>
         </form>
       </div>
