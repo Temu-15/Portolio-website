@@ -11,7 +11,12 @@ import YeahRightImage from "../assets/images/yeah-right.webp";
 import certificateImage from "../assets/images/certificate.jpg";
 import Footer from "../Components/Footer";
 import { FaRegSquareCheck } from "react-icons/fa6";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import helloAnimation from "../assets/animation/Animation-hello.json";
+import Lottie from "lottie-react";
+import { useLocation } from "react-router-dom";
 function AboutPage() {
+  const location = useLocation();
   const imgRef = useRef(null);
   const handleclick = () => {
     imgRef.current.classList.add("left-[0]");
@@ -41,7 +46,6 @@ function AboutPage() {
               I try my best to learn in any situation possible, unfavorable or
               not.
             </p>
-
             <blockquote className="relative text-[#a1a1aa] overflow-hidden tracking-tight text-[18px] my-[32px] lg:py-[24px] lg:pl-[24px] pr-[48px] p-[16px] border border-zinc-800 rounded-[6px]">
               <svg
                 stroke="currentColor"
@@ -82,7 +86,6 @@ function AboutPage() {
               press of a button, providing a seamless and comfortable transfer
               process for patients in hospitals.
             </p>
-
             <h2 className="pl-4 mb-[10px] mt-[30px] text-3xl font-extrabold leading-none tracking-tight  md:text-3xl text-white">
               Biomedical Management System
             </h2>
@@ -198,12 +201,23 @@ function AboutPage() {
           </div>
           <div>
             <div>
-              <img
+              {/* <img
                 src={aboutImage}
                 alt=""
                 width="400px"
                 height="400px"
                 className="rounded-2xl mb-[16px] bg-top max-h-[384px] "
+              /> */}
+              <Lottie
+                key={location.pathname}
+                animationData={JSON.parse(JSON.stringify(helloAnimation))}
+                style={{
+                  height: 400,
+
+                  marginBottom: 16,
+                  maxHeight: 384,
+                }}
+                loop={true}
               />
             </div>
 
