@@ -9,6 +9,7 @@ import ScrollToTop from "./ScrollToTop";
 import Preloader from "./Components/Preloader";
 import TopBar from "./Components/TopBar";
 import Header from "./Components/Header";
+import Blog from "./Pages/Blog";
 
 // Lazy load components
 const Hero = lazy(() => import("./Components/Hero"));
@@ -76,6 +77,7 @@ function App() {
               <Route path="showresume" element={<Resume />} />
               <Route path="projects" element={<ProjectPage />} />
               <Route path="projects/:project" element={<Project />} />
+              <Route path="/blogs" element={<Blog />} />
             </Routes>
           </Suspense>
         </>
